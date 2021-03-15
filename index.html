@@ -25,5 +25,20 @@
         <p>Lorem ipsum</p>
         <p>Creating parallax effect</p>
     </section>
+    <script>
+        var layman = document.getElementsByClassName("layer-4");
+        var lay1 = document.getElementsByClassName("layer-1");
+        var lay2 = document.getElementsByClassName("layer-2");
+        var lay3 = document.getElementsByClassName("layer-3");
+        var laybg = document.getElementsByClassName("layer-background");
+        window.addEventListener("scroll", function(){
+            var posun = window.pageYOffset;
+            window.onscroll = function(){layman[0].style.transform = "translateY(-"+ posun +"px) translateX(-" + posun*1.25 +"px)";
+            lay1[0].style.transform = "translateY(-"+ posun*0.25 +"px) translateX(0px)";
+            lay2[0].style.transform = "translateY(-"+ posun*0.5 +"px)";
+            lay3[0].style.transform = "translateY(-"+ posun +"px)";
+            laybg[0].style.transform = "translateY(-0px)"};
+        })
+    </script>
 </body>
 </html>
